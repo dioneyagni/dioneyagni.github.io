@@ -1,36 +1,336 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="signals.css" media="all"/>
-    <title>I want to be one of the new interns at 37 signals</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dione Martins · Design de estampas, produto e software</title>
+  <meta name="description" content="Dione de Oliveira Alves Martins: designer de estampas e produto no polo calçadista de Nova Serrana e desenvolvedor Ruby on Rails. Divinópolis, MG.">
+  <link rel="canonical" href="https://dioneyagni.github.io/">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K57JJEJHMC"></script>
-    <script>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dione Martins · Design de estampas, produto e software">
+  <meta property="og:description" content="Mais de 8 anos criando estampas e produto para calçados e confecção, e programando o que a fábrica precisa.">
+  <meta property="og:url" content="https://dioneyagni.github.io/">
+  <meta name="theme-color" content="#F2F3EF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151922" media="(prefers-color-scheme: dark)">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,400&display=swap">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='9' fill='none' stroke='%23D4237A' stroke-width='2.5'/%3E%3Cpath d='M16 1v30M1 16h30' stroke='%231D2433' stroke-width='2.5'/%3E%3C/svg%3E">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-K57JJEJHMC"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-K57JJEJHMC');
-    </script>
+  </script>
 </head>
 <body>
-  
-<main class="content">
-  <nav>
-    <ul>
-      <li><a href="index.html">Why this job</a></li>
-      <li><a href="basecamp.html">on basecamp</a></li>
-      <li><a href="hey.html">on hey</a></li>
-    </ul>
-</nav>
-  <h1 class="headline">I want to be one of the new interns at 37 signals</h1>
- 
 
-  
-</main>
+  <!--
+    Arte da "grade": a mesma estampa desenhada uma vez e usada em todos os tamanhos.
+    Fica escondida aqui e é reaproveitada no topo com <use href="#palmilha">.
+  -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="contorno">
+        <path d="M30 4C46 4 55 18 55 38c0 20-7 32-9 48-2 16 4 32 2 50-2 14-9 21-18 21s-16-7-17-19c-2-18 2-34 0-50C11 70 5 58 5 38 5 18 14 4 30 4z"/>
+      </clipPath>
+    </defs>
+    <symbol id="palmilha" viewBox="0 0 60 161">
+      <g clip-path="url(#contorno)">
+        <rect width="60" height="161" class="arte-fundo"/>
+        <path d="M-10 34C12 20 44 48 70 28V46C46 64 14 36 -10 52Z" class="arte-ciano"/>
+        <path d="M-10 96C12 82 44 110 70 90V104C46 122 14 94 -10 110Z" class="arte-ciano"/>
+        <circle cx="18" cy="72" r="9" class="arte-magenta"/>
+        <circle cx="44" cy="128" r="12" class="arte-magenta"/>
+        <circle cx="40" cy="66" r="3.5" class="arte-amarelo"/>
+        <circle cx="20" cy="140" r="5" class="arte-amarelo"/>
+        <circle cx="34" cy="16" r="4" class="arte-amarelo"/>
+      </g>
+      <path d="M30 4C46 4 55 18 55 38c0 20-7 32-9 48-2 16 4 32 2 50-2 14-9 21-18 21s-16-7-17-19c-2-18 2-34 0-50C11 70 5 58 5 38 5 18 14 4 30 4z" class="arte-contorno"/>
+    </symbol>
+  </svg>
+
+  <a class="pular" href="#trabalhos">Pular para os trabalhos</a>
+
+  <header class="topo">
+    <a class="marca" href="#inicio">Dione Martins</a>
+    <nav aria-label="Seções">
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#3d">3D</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ============ ABERTURA ============ -->
+    <section class="abertura" aria-labelledby="nome">
+      <div class="prova">
+        <h1 id="nome">Dione de Oliveira<br>Alves Martins</h1>
+        <p class="apresentacao">
+          Crio estampas e desenvolvo produto para calçados e confecção no polo de Nova Serrana há mais de 8 anos.
+          E programo o que a fábrica precisa para a arte chegar inteira à produção.
+        </p>
+      </div>
+
+      <figure class="grade">
+        <ol class="grade-tamanhos">
+          <li style="--t:.46"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>20</span></li>
+          <li style="--t:.58"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>25</span></li>
+          <li style="--t:.70"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>30</span></li>
+          <li style="--t:.82"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>35</span></li>
+          <li style="--t:.92"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>39</span></li>
+          <li style="--t:1"><svg viewBox="0 0 60 161" aria-hidden="true"><use href="#palmilha"/></svg><span>44</span></li>
+        </ol>
+        <figcaption>
+          Uma arte, todas as numerações. Na EKOPrint, automatizei com scripts no Photoshop o encaixe de cada estampa
+          do infantil ao adulto, e a empresa passou a produzir mais de 45 mil pares por dia.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ TRABALHOS ============ -->
+    <section id="trabalhos" class="secao" aria-labelledby="t-trabalhos">
+      <h2 id="t-trabalhos">Trabalhos</h2>
+
+      <h3 class="grupo">Estampa e produto</h3>
+      <ul class="trabalhos">
+        <li>
+          <p class="quando">2017 a 2019</p>
+          <div>
+            <h4>Grade automática de estampas</h4>
+            <p>Objetos vinculados e scripts no Photoshop, com regras de pastas no servidor. A arte era feita uma vez e os arquivos de cada tamanho saíam prontos para conferência. O desenvolvimento virou uma linha de montagem: preparação, geração automática e conferência.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2018 a 2023</p>
+          <div>
+            <h4>Chinelos e tênis licenciados e Private Label</h4>
+            <p>Coleções com personagens Marvel, DC, Star Wars e My Little Pony, seguindo o guia de cada licenciado. Trabalho direto com estilistas de redes como Marisa e Studio Z e com escritórios de licenciamento, com mockups antes de produzir e o desenho ajustado ao custo de cada cliente.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2019</p>
+          <div>
+            <h4>Foco, Yuupiii</h4>
+            <p>Estampa contínua de sola e cabedal combinando sublimação e UV, dentro de um orçamento baixo.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2018</p>
+          <div>
+            <h4>Batatinha</h4>
+            <p>Linha infantil apresentada aos licenciados da C&amp;A.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2023 até hoje</p>
+          <div>
+            <h4>Padronização da produção na NOVAC</h4>
+            <p>Depois da fusão com a EKOPrint, igualei o resultado entre máquinas de especificações e insumos diferentes, escrevi os procedimentos operacionais (POPs) e organizei a infraestrutura.</p>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="grupo">Software</h3>
+      <ul class="trabalhos">
+        <li>
+          <p class="quando">Hoje</p>
+          <div>
+            <h4>Sistema de desenvolvimento e produção da estamparia</h4>
+            <p>Aplicação em Ruby on Rails para organizar o desenvolvimento de produtos e a produção. Escrita em boa parte com IA, revisada linha a linha e coberta por testes de ponta a ponta.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2020 a 2023</p>
+          <div>
+            <h4>Nova interface do sistema de produção</h4>
+            <p>Redesenhei a usabilidade de um sistema de terminal (PICK), implementada pelo programador do sistema. Mais de 20 telas viraram 2 para o usuário comum e 8 para administradores, com busca, filtro e ordenação numa só tela, cadastro guiado e precificação e estoque integrados.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2015</p>
+          <div>
+            <h4>Sistema de caixa da Gradil Ferro e Aço</h4>
+            <p>Controle de recebimentos com lançamentos de crédito e débito em PHP e MySQL, no lugar de uma planilha. Seguiu em uso por anos.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2015</p>
+          <div>
+            <h4>Pandora</h4>
+            <p>Gerenciador de conteúdo para os clientes da agência TCI, ao lado de sites em WordPress com ajustes no código das extensões.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2010 a 2011</p>
+          <div>
+            <h4>Sistema de cartão de benefícios</h4>
+            <p>Sistema web em PHP e MySQL em que o próprio cliente cadastrava as empresas parceiras, com pesquisa, filtros, imagens e perfis de acesso para vendedores, financeiro e clientes.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ 3D E PROTÓTIPOS ============ -->
+    <section id="3d" class="secao" aria-labelledby="t-3d">
+      <h2 id="t-3d">3D e protótipos</h2>
+      <p class="texto">
+        Modelo e prototipo no Fusion 360, com impressão 3D, usinagem e corte a plasma. Também faço modelagem de calçados,
+        manual e digital, desde o curso do SENAI de Nova Serrana. Antes da estamparia, desenhei estruturas e móveis
+        planejados e desenvolvi peças para corte a plasma na Gradil Ferro e Aço.
+      </p>
+
+      <!--
+        COMO ADICIONAR UM TRABALHO 3D
+        1. Coloque a imagem em assets/img/3d/ (ex.: matriz-solado.jpg, 1600px de largura).
+        2. Copie o bloco <figure> abaixo para dentro de <div class="galeria-3d">, troque os textos
+           e apague a linha class="aguardando" quando o primeiro trabalho entrar.
+
+        <figure>
+          <img src="assets/img/3d/matriz-solado.jpg" alt="Descreva o que aparece na imagem" loading="lazy" width="1600" height="1200">
+          <figcaption><strong>Nome do projeto</strong> Fusion 360 e impressão 3D, 2025</figcaption>
+        </figure>
+
+        Para um modelo 3D girável (.glb), use no lugar da <img>:
+        <model-viewer src="assets/img/3d/peca.glb" alt="Descrição" camera-controls auto-rotate></model-viewer>
+        e acrescente uma única vez, antes de </body>:
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+      -->
+      <div class="galeria-3d">
+        <p class="aguardando">Os primeiros modelos e protótipos entram aqui em breve.</p>
+      </div>
+    </section>
+
+    <!-- ============ COMO EU TRABALHO ============ -->
+    <section id="como" class="secao" aria-labelledby="t-como">
+      <h2 id="t-como">Como eu trabalho</h2>
+      <dl class="principios">
+        <div>
+          <dt>Do desenho à máquina</dt>
+          <dd>Acompanho o produto da arte até a produção e escolho a técnica com quem vai imprimir: sublimação, silk, UV, transfer ou DTF, em impressoras Roland, Mimaki e chinesas.</dd>
+        </div>
+        <div>
+          <dt>Automatizo o repetitivo</dt>
+          <dd>O que a equipe faz igual todo dia vira script, para sobrar tempo para criar.</dd>
+        </div>
+        <div>
+          <dt>Ruby, com IA e com testes</dt>
+          <dd>Desde dezembro de 2025 a maior parte do código é escrita com IA. Escolhi Ruby porque consigo ler tudo o que entra no projeto, e uso as convenções e os generators do Rails como padrão a seguir. Nada fica pronto sem testes, principalmente os de ponta a ponta.</dd>
+        </div>
+        <div>
+          <dt>Bonito e simples de usar</dt>
+          <dd>Passei anos usando sistemas dentro da fábrica. Sei o que faz uma ferramenta ser usada ou abandonada no dia a dia.</dd>
+        </div>
+        <div>
+          <dt>Menos FOMO, mais JOMO</dt>
+          <dd>Ferramenta nova: leio a documentação, testo se fizer sentido e só fica se ajudar de verdade. Quando o Ruby não basta, uso bibliotecas em C ou APIs em Python e confiro os resultados com um oráculo de teste. Quando empaco, pergunto a quem sabe mais.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ============ TRAJETÓRIA ============ -->
+    <section id="trajetoria" class="secao" aria-labelledby="t-trajetoria">
+      <h2 id="t-trajetoria">Trajetória</h2>
+      <ol class="linha">
+        <li>
+          <p class="quando">2023 até hoje</p>
+          <div>
+            <h3>NOVAC (LV Componentes)</h3>
+            <p class="cargo">Criação e inovação</p>
+            <p>Criação e inovação de produto junto com o comercial e os fornecedores, atendendo às fábricas do polo calçadista.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2020 a 2023</p>
+          <div>
+            <h3>EKOPrint</h3>
+            <p class="cargo">Sócio administrativo</p>
+            <p>Desenvolvimento de produto e controle de qualidade, com novas linhas, processos e matérias-primas. Fluxos de trabalho por tipo de produto, custos, logística, licenciamentos e Private Label. Equipe de 6 designers e 5 vendedores externos, em 2 turnos. Atendimento direto a Marisa e Studio Z e, pelas fábricas, a Pernambucanas, Humanitarian Calçados e Netshoes.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2017 a 2019</p>
+          <div>
+            <h3>EKOPrint (Nogueira e Silva)</h3>
+            <p class="cargo">Designer de estampas, depois gerente de desenvolvimento</p>
+            <p>Estampas de cabedal de tênis e chinelo, inclusive licenciadas. A partir de abril de 2018, coordenei 4 designers atendendo a produção em 3 turnos, com metas, direção de arte e mockups.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2016</p>
+          <div>
+            <h3>Sestape</h3>
+            <p class="cargo">Vendas, faturamento e financeiro</p>
+            <p>Loja de peças e acessórios para computadores, servidores e redes.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2015</p>
+          <div>
+            <h3>Grupo TCI</h3>
+            <p class="cargo">Desenvolvedor web</p>
+            <p>Sites em WordPress e peças de campanha no Illustrator e no Photoshop para uma agência de marketing do Centro-Oeste mineiro.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2012 a 2015</p>
+          <div>
+            <h3>Gradil Ferro e Aço</h3>
+            <p class="cargo">Faturamento, financeiro e suporte de TI</p>
+            <p>Entrei como repositor. Assumi o faturamento e o financeiro, padronizei a marca nos documentos, desenhei estruturas e móveis para orçamentos e desenvolvi peças para as máquinas de corte a plasma.</p>
+          </div>
+        </li>
+        <li>
+          <p class="quando">2010 a 2015</p>
+          <div>
+            <h3>Ótima Treinamentos e Microlins</h3>
+            <p class="cargo">Instrutor</p>
+            <p>Aulas de Office, CorelDRAW, Photoshop, desenvolvimento web e rotinas administrativas. Na Ótima, também criei sites e campanhas para os clientes da escola.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ FORMAÇÃO E FERRAMENTAS ============ -->
+    <section id="formacao" class="secao" aria-labelledby="t-formacao">
+      <h2 id="t-formacao">Formação e ferramentas</h2>
+      <div class="duas">
+        <ul class="formacao">
+          <li><strong>Modelagem manual e digital de tênis</strong> Sindinova e SENAI Nova Serrana, 2024, 85 horas</li>
+          <li><strong>Aperfeiçoamento</strong> Ótima Treinamentos, 2012: design de calçados (CorelDRAW e ArtCAM) e web design (HTML, CSS, JavaScript, PHP e MySQL)</li>
+          <li><strong>Profissionalizante</strong> Ábil Computação, 2010 a 2012: informática, design gráfico e manutenção de computadores</li>
+        </ul>
+        <dl class="ferramentas">
+          <dt>Design</dt><dd>Illustrator, Photoshop, CorelDRAW, ArtCAM, Whimsical</dd>
+          <dt>3D e protótipo</dt><dd>Fusion 360, impressão 3D, usinagem, corte a plasma</dd>
+          <dt>Impressão e RIP</dt><dd>Wasatch SoftRIP, RasterLink, PhotoPrint</dd>
+          <dt>Desenvolvimento</dt><dd>Ruby on Rails, HTML, CSS, JavaScript, PHP, MySQL, WordPress, testes E2E, agentes de código</dd>
+          <dt>Escritório</dt><dd>Excel, Word, PowerPoint, Access</dd>
+        </dl>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ CONTATO ============ -->
+  <footer id="contato" class="contato" aria-labelledby="t-contato">
+    <h2 id="t-contato">Vamos conversar</h2>
+    <p>Moro em Divinópolis, MG, e procuro uma oportunidade na cidade. Tenho CNH e carro próprio.</p>
+    <ul class="canais">
+      <li><a href="mailto:dioneyagni@gmail.com">dioneyagni@gmail.com</a></li>
+      <li><a href="https://wa.me/5537996712930">WhatsApp (37) 9 9671-2930</a></li>
+      <li><a href="https://github.com/dioneyagni">GitHub</a></li>
+    </ul>
+  </footer>
+
 </body>
 </html>

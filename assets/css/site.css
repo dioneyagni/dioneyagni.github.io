@@ -1,0 +1,292 @@
+/* =========================================================
+   Portfólio Dione Martins
+   Cores de processo (ciano, magenta, amarelo) sobre papel e tinta.
+   ========================================================= */
+
+:root {
+  --papel: #F2F3EF;
+  --papel-2: #E6E8E2;
+  --tinta: #1D2433;
+  --tinta-suave: #525B6B;
+  --linha: #C9CDC4;
+  --ciano: #0093B8;
+  --magenta: #C81F72;
+  --amarelo: #F2C200;
+  --arte-fundo: #FFFFFF;
+
+  --fonte: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --gutter: 16px;
+  --largura: 72rem;
+  --medida: 64ch;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #151922;
+    --papel-2: #1E2430;
+    --tinta: #E7E9EC;
+    --tinta-suave: #A2A9B6;
+    --linha: #343B49;
+    --ciano: #3BB9DA;
+    --magenta: #EC5A9E;
+    --amarelo: #F2C200;
+    --arte-fundo: #F4F4EF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #151922;
+  --papel-2: #1E2430;
+  --tinta: #E7E9EC;
+  --tinta-suave: #A2A9B6;
+  --linha: #343B49;
+  --ciano: #3BB9DA;
+  --magenta: #EC5A9E;
+  --arte-fundo: #F4F4EF;
+  color-scheme: dark;
+}
+
+/* ---------- base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--fonte);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  font-variation-settings: "wdth" 100;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+
+a { color: inherit; text-decoration-color: var(--magenta); text-decoration-thickness: 2px; text-underline-offset: .2em; }
+a:hover { color: var(--magenta); }
+:focus-visible { outline: 3px solid var(--ciano); outline-offset: 3px; border-radius: 2px; }
+
+.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+.pular {
+  position: absolute; left: var(--gutter); top: -4rem;
+  background: var(--tinta); color: var(--papel); padding: .6rem 1rem; z-index: 10;
+}
+.pular:focus { top: .75rem; }
+
+/* ---------- topo ---------- */
+.topo {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1.5rem;
+  max-width: var(--largura); margin: 0 auto;
+  padding: .9rem var(--gutter);
+  background: color-mix(in srgb, var(--papel) 92%, transparent);
+  backdrop-filter: blur(6px);
+}
+.marca {
+  font-weight: 800; font-variation-settings: "wdth" 125; text-decoration: none;
+  letter-spacing: -.01em;
+}
+.topo nav { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; font-size: .95rem; }
+.topo nav a { text-decoration: none; color: var(--tinta-suave); font-variation-settings: "wdth" 85; font-weight: 550; }
+.topo nav a:hover { color: var(--magenta); }
+
+main, .contato { max-width: var(--largura); margin: 0 auto; padding-inline: var(--gutter); }
+
+/* ---------- abertura ---------- */
+.abertura {
+  display: grid; gap: 3rem;
+  padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 8vw, 6rem);
+}
+
+/* marcas de corte nos quatro cantos, como numa prova de impressão */
+.prova {
+  --m: 22px; --e: 1.5px;
+  position: relative;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  background:
+    linear-gradient(var(--tinta), var(--tinta)) left top / var(--m) var(--e),
+    linear-gradient(var(--tinta), var(--tinta)) left top / var(--e) var(--m),
+    linear-gradient(var(--tinta), var(--tinta)) right top / var(--m) var(--e),
+    linear-gradient(var(--tinta), var(--tinta)) right top / var(--e) var(--m),
+    linear-gradient(var(--tinta), var(--tinta)) left bottom / var(--m) var(--e),
+    linear-gradient(var(--tinta), var(--tinta)) left bottom / var(--e) var(--m),
+    linear-gradient(var(--tinta), var(--tinta)) right bottom / var(--m) var(--e),
+    linear-gradient(var(--tinta), var(--tinta)) right bottom / var(--e) var(--m);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: clamp(2.35rem, 7.4vw, 6.25rem);
+  line-height: .95;
+  font-weight: 820;
+  font-variation-settings: "wdth" 125;
+  letter-spacing: -.025em;
+  overflow-wrap: anywhere;
+}
+
+.apresentacao {
+  margin-top: 1.75rem;
+  max-width: 46ch;
+  font-size: clamp(1.15rem, 2vw, 1.45rem);
+  line-height: 1.4;
+  font-variation-settings: "wdth" 92;
+}
+
+/* a grade: a mesma arte em várias numerações */
+.grade { display: grid; gap: 1.25rem; }
+@media (min-width: 900px) {
+  .grade { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: end; gap: 3rem; }
+}
+
+.grade-tamanhos {
+  display: flex; align-items: flex-end; gap: clamp(.4rem, 1.6vw, 1.1rem);
+  padding-bottom: .25rem;
+}
+.grade-tamanhos li {
+  width: calc(var(--t) * clamp(2.6rem, 9vw, 5.25rem));
+  display: grid; justify-items: center; gap: .4rem;
+}
+.grade-tamanhos svg { width: 100%; height: auto; display: block; overflow: visible; }
+.grade-tamanhos span {
+  font-size: .85rem; font-weight: 600; color: var(--tinta-suave);
+  font-variation-settings: "wdth" 70; font-variant-numeric: tabular-nums;
+}
+
+.arte-fundo { fill: var(--arte-fundo); }
+.arte-ciano { fill: var(--ciano); }
+.arte-magenta { fill: var(--magenta); }
+.arte-amarelo { fill: var(--amarelo); }
+.arte-contorno { fill: none; stroke: var(--tinta); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+
+.grade figcaption {
+  max-width: 44ch; color: var(--tinta-suave); font-size: .98rem;
+  border-left: 3px solid var(--amarelo); padding-left: 1rem;
+}
+
+/* um único momento de movimento: as numerações aparecem da menor para a maior */
+@media (prefers-reduced-motion: no-preference) {
+  .grade-tamanhos li { animation: entra .55s cubic-bezier(.2, .7, .2, 1) both; transform-origin: bottom center; }
+  .grade-tamanhos li:nth-child(1) { animation-delay: .15s; }
+  .grade-tamanhos li:nth-child(2) { animation-delay: .25s; }
+  .grade-tamanhos li:nth-child(3) { animation-delay: .35s; }
+  .grade-tamanhos li:nth-child(4) { animation-delay: .45s; }
+  .grade-tamanhos li:nth-child(5) { animation-delay: .55s; }
+  .grade-tamanhos li:nth-child(6) { animation-delay: .65s; }
+  @keyframes entra { from { opacity: 0; transform: translateY(14px) scale(.85); } }
+}
+
+/* ---------- seções ---------- */
+.secao { padding-block: clamp(2.75rem, 6vw, 4.5rem); border-top: 1.5px solid var(--tinta); }
+
+h2 {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1;
+  font-weight: 780;
+  font-variation-settings: "wdth" 118;
+  letter-spacing: -.02em;
+  margin-bottom: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.grupo {
+  font-size: 1.15rem; font-weight: 650; font-variation-settings: "wdth" 80;
+  color: var(--magenta);
+  margin: 2.25rem 0 .25rem;
+}
+.grupo:first-of-type { margin-top: 0; }
+
+.texto { max-width: var(--medida); font-size: 1.1rem; }
+
+/* linhas com ano à esquerda (trabalhos e trajetória) */
+.trabalhos > li, .linha > li {
+  display: grid; gap: .25rem 2rem;
+  padding-block: 1.25rem;
+  border-bottom: 1px solid var(--linha);
+}
+@media (min-width: 720px) {
+  .trabalhos > li, .linha > li { grid-template-columns: 10rem minmax(0, var(--medida)); }
+}
+.quando {
+  font-size: .95rem; font-weight: 600; color: var(--tinta-suave);
+  font-variation-settings: "wdth" 75; font-variant-numeric: tabular-nums;
+  padding-top: .2rem;
+}
+.trabalhos h4, .linha h3 {
+  font-size: 1.3rem; line-height: 1.2; font-weight: 720; font-variation-settings: "wdth" 105;
+  margin-bottom: .35rem;
+}
+.trabalhos p:not(.quando), .linha p:not(.quando):not(.cargo) { color: var(--tinta); }
+.cargo { color: var(--tinta-suave); font-style: italic; margin-bottom: .4rem; }
+
+/* trajetória: fio vertical com marca de registro em cada parada */
+@media (min-width: 720px) {
+  .linha > li { position: relative; border-bottom: 0; padding-block: 1.1rem; }
+  .linha > li > div { position: relative; padding-left: 2rem; border-left: 1.5px solid var(--linha); padding-bottom: .5rem; }
+  .linha > li > div::before {
+    content: ""; position: absolute; left: -8px; top: .35rem;
+    width: 14px; height: 14px; border-radius: 50%;
+    border: 1.5px solid var(--tinta); background: var(--papel);
+  }
+  .linha > li:first-child > div::before { background: var(--magenta); border-color: var(--magenta); }
+}
+
+/* 3D */
+.galeria-3d {
+  margin-top: 2rem;
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+}
+.galeria-3d figure { display: grid; gap: .6rem; }
+.galeria-3d img, .galeria-3d model-viewer {
+  width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+  background: var(--papel-2); display: block;
+}
+.galeria-3d figcaption { font-size: .95rem; color: var(--tinta-suave); }
+.galeria-3d figcaption strong { display: block; color: var(--tinta); font-weight: 700; }
+.aguardando {
+  grid-column: 1 / -1;
+  padding: 1.5rem; color: var(--tinta-suave);
+  border: 1.5px dashed var(--linha);
+}
+
+/* como eu trabalho */
+.principios { display: grid; gap: 1.75rem 3rem; }
+@media (min-width: 820px) { .principios { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.principios div { max-width: 52ch; }
+.principios dt { font-size: 1.2rem; font-weight: 720; font-variation-settings: "wdth" 105; margin-bottom: .3rem; }
+.principios dd { color: var(--tinta); }
+
+/* formação e ferramentas */
+.duas { display: grid; gap: 2.5rem 4rem; }
+@media (min-width: 860px) { .duas { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.formacao li { padding-block: .8rem; border-bottom: 1px solid var(--linha); }
+.formacao li:first-child { padding-top: 0; }
+.formacao strong { display: block; font-weight: 700; }
+.ferramentas { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: .7rem 1rem; }
+.ferramentas dt { font-weight: 650; font-variation-settings: "wdth" 80; color: var(--tinta-suave); }
+@media (max-width: 420px) {
+  .ferramentas { grid-template-columns: 1fr; gap: .1rem; }
+  .ferramentas dd { margin-bottom: .7rem; }
+}
+
+/* ---------- contato ---------- */
+.contato {
+  width: min(100% - 2 * var(--gutter), var(--largura) - 2 * var(--gutter));
+  padding-inline: 0;
+  padding-block: clamp(3rem, 7vw, 5rem) 4rem;
+  border-top: 1.5px solid var(--tinta);
+}
+.contato h2 { margin-bottom: 1rem; }
+.contato > p { max-width: var(--medida); color: var(--tinta-suave); }
+.canais { margin-top: 1.75rem; display: grid; gap: .6rem; }
+.canais a {
+  font-size: clamp(1.2rem, 3.2vw, 2rem);
+  font-weight: 700; font-variation-settings: "wdth" 110;
+  overflow-wrap: anywhere;
+}
