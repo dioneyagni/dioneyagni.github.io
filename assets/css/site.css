@@ -12,7 +12,6 @@
   --ciano: #0093B8;
   --magenta: #C81F72;
   --amarelo: #F2C200;
-  --arte-fundo: #FFFFFF;
 
   --fonte: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --gutter: 16px;
@@ -31,7 +30,6 @@
     --ciano: #3BB9DA;
     --magenta: #EC5A9E;
     --amarelo: #F2C200;
-    --arte-fundo: #F4F4EF;
     color-scheme: dark;
   }
 }
@@ -43,7 +41,6 @@
   --linha: #343B49;
   --ciano: #3BB9DA;
   --magenta: #EC5A9E;
-  --arte-fundo: #F4F4EF;
   color-scheme: dark;
 }
 
@@ -72,8 +69,6 @@ a { color: inherit; text-decoration-color: var(--magenta); text-decoration-thick
 a:hover { color: var(--magenta); }
 :focus-visible { outline: 3px solid var(--ciano); outline-offset: 3px; border-radius: 2px; }
 
-.sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
-
 .pular {
   position: absolute; left: var(--gutter); top: -4rem;
   background: var(--tinta); color: var(--papel); padding: .6rem 1rem; z-index: 10;
@@ -101,7 +96,7 @@ main, .contato { max-width: var(--largura); margin: 0 auto; padding-inline: var(
 
 /* ---------- abertura ---------- */
 .abertura {
-  display: grid; gap: 3rem;
+  display: grid;
   padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 8vw, 6rem);
 }
 
@@ -137,49 +132,6 @@ h1 {
   font-size: clamp(1.15rem, 2vw, 1.45rem);
   line-height: 1.4;
   font-variation-settings: "wdth" 92;
-}
-
-/* a grade: a mesma arte em várias numerações */
-.grade { display: grid; gap: 1.25rem; }
-@media (min-width: 900px) {
-  .grade { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); align-items: end; gap: 3rem; }
-}
-
-.grade-tamanhos {
-  display: flex; align-items: flex-end; gap: clamp(.4rem, 1.6vw, 1.1rem);
-  padding-bottom: .25rem;
-}
-.grade-tamanhos li {
-  width: calc(var(--t) * clamp(2.6rem, 9vw, 5.25rem));
-  display: grid; justify-items: center; gap: .4rem;
-}
-.grade-tamanhos svg { width: 100%; height: auto; display: block; overflow: visible; }
-.grade-tamanhos span {
-  font-size: .85rem; font-weight: 600; color: var(--tinta-suave);
-  font-variation-settings: "wdth" 70; font-variant-numeric: tabular-nums;
-}
-
-.arte-fundo { fill: var(--arte-fundo); }
-.arte-ciano { fill: var(--ciano); }
-.arte-magenta { fill: var(--magenta); }
-.arte-amarelo { fill: var(--amarelo); }
-.arte-contorno { fill: none; stroke: var(--tinta); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
-
-.grade figcaption {
-  max-width: 44ch; color: var(--tinta-suave); font-size: .98rem;
-  border-left: 3px solid var(--amarelo); padding-left: 1rem;
-}
-
-/* um único momento de movimento: as numerações aparecem da menor para a maior */
-@media (prefers-reduced-motion: no-preference) {
-  .grade-tamanhos li { animation: entra .55s cubic-bezier(.2, .7, .2, 1) both; transform-origin: bottom center; }
-  .grade-tamanhos li:nth-child(1) { animation-delay: .15s; }
-  .grade-tamanhos li:nth-child(2) { animation-delay: .25s; }
-  .grade-tamanhos li:nth-child(3) { animation-delay: .35s; }
-  .grade-tamanhos li:nth-child(4) { animation-delay: .45s; }
-  .grade-tamanhos li:nth-child(5) { animation-delay: .55s; }
-  .grade-tamanhos li:nth-child(6) { animation-delay: .65s; }
-  @keyframes entra { from { opacity: 0; transform: translateY(14px) scale(.85); } }
 }
 
 /* ---------- seções ---------- */
