@@ -290,3 +290,96 @@ h2 {
   font-weight: 700; font-variation-settings: "wdth" 110;
   overflow-wrap: anywhere;
 }
+
+/* ---------- home: projetos com imagem ---------- */
+.trabalhos > li.com-imagem { align-items: start; }
+@media (min-width: 720px) {
+  .trabalhos > li.com-imagem { grid-template-columns: 10rem minmax(0, var(--medida)) minmax(9rem, 15rem); }
+}
+.miniatura {
+  display: block; background: #fff;
+  aspect-ratio: 4 / 3; overflow: hidden;
+}
+.miniatura img, .miniatura video { width: 100%; height: 100%; object-fit: contain; display: block; }
+@media (max-width: 719px) { .miniatura { max-width: 22rem; margin-top: .75rem; } }
+.ver {
+  display: inline-block; margin-top: .6rem;
+  font-weight: 650; font-variation-settings: "wdth" 90;
+}
+
+/* ---------- páginas de projeto ---------- */
+.projeto-topo { padding-block: clamp(2rem, 6vw, 4rem) clamp(2rem, 5vw, 3rem); }
+.voltar { font-size: .95rem; font-variation-settings: "wdth" 85; font-weight: 550; color: var(--tinta-suave); }
+.projeto-topo h1 { margin-top: 1.5rem; font-size: clamp(2.2rem, 6.5vw, 5rem); }
+.projeto-topo .apresentacao { max-width: 54ch; }
+
+.ficha { margin-top: 2rem; display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; }
+.ficha dt { font-size: .85rem; font-weight: 600; color: var(--tinta-suave); font-variation-settings: "wdth" 75; }
+.ficha dd { font-weight: 600; }
+
+.midia { margin-block: 0 clamp(2.5rem, 6vw, 4rem); }
+.midia a { display: block; }
+.midia img, .midia video {
+  display: block; width: 100%; height: auto;
+  background: var(--papel-2);
+}
+.midia video { max-height: 80vh; object-fit: contain; }
+.midia figcaption { margin-top: .6rem; font-size: .95rem; color: var(--tinta-suave); }
+
+.duas-midias { display: grid; gap: 1.5rem; margin-bottom: 2rem; }
+@media (min-width: 760px) { .duas-midias { grid-template-columns: 1fr 1fr; } }
+.duas-midias .midia { margin: 0; }
+
+.secao .texto + .galeria, .secao .texto + .midia { margin-top: 1.5rem; }
+
+.galeria {
+  display: grid; gap: clamp(.5rem, 1.5vw, 1rem);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 14rem), 1fr));
+}
+.galeria.cabedais { grid-template-columns: repeat(auto-fill, minmax(min(46%, 11.5rem), 1fr)); }
+.galeria.largas { grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); }
+.galeria a {
+  display: block; height: 100%;
+  background: var(--papel-2);
+  padding: clamp(.4rem, 1vw, .75rem);
+}
+.galeria.largas a { padding: 0; background: #fff; }
+.galeria img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.galeria a:hover { outline: 2px solid var(--magenta); outline-offset: -2px; }
+
+.proximo { border-top: 1.5px solid var(--tinta); padding-block: 2rem 1rem; }
+.proximo a {
+  display: inline-flex; flex-direction: column; gap: .2rem;
+  font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 780; font-variation-settings: "wdth" 115;
+  letter-spacing: -.015em; line-height: 1.05; text-decoration: none;
+}
+.proximo a span { font-size: .95rem; font-weight: 600; color: var(--tinta-suave); font-variation-settings: "wdth" 80; letter-spacing: 0; }
+.proximo a:hover { color: var(--magenta); }
+
+/* visualizador de imagens */
+.visor {
+  width: 100vw; height: 100vh; max-width: none; max-height: none;
+  margin: 0; padding: 0; border: 0;
+  background: rgb(10 12 18 / .94); color: #EEF0F2;
+}
+.visor::backdrop { background: rgb(10 12 18 / .6); }
+.visor figure {
+  height: 100%; display: grid; place-items: center;
+  padding: 3.5rem var(--gutter) 3rem;
+}
+.visor img { max-width: 100%; max-height: calc(100vh - 7rem); width: auto; height: auto; object-fit: contain; }
+.visor figcaption { position: absolute; bottom: 1rem; left: 0; right: 0; text-align: center; font-size: .9rem; color: #B9BEC7; }
+.visor button {
+  position: absolute; border: 0; cursor: pointer;
+  background: rgb(255 255 255 / .1); color: inherit; font: inherit;
+}
+.visor button:hover { background: rgb(255 255 255 / .2); }
+.visor-fechar { top: .75rem; right: .75rem; padding: .5rem 1rem; font-weight: 600; }
+.visor-ant, .visor-prox { top: 50%; translate: 0 -50%; width: 3rem; height: 4.5rem; font-size: 2rem !important; line-height: 1; }
+.visor-ant { left: .5rem; }
+.visor-prox { right: .5rem; }
+.visor :focus-visible { outline-color: #fff; }
+.trabalhos h4 a { text-decoration: none; }
+.trabalhos h4 a:hover { text-decoration: underline; }
+.galeria:not(.cabedais) a { background: #fff; }
+.midia video { background: #fff; }
